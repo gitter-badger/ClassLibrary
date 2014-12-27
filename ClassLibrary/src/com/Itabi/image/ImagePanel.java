@@ -1,6 +1,7 @@
 package com.Itabi.image;
 
 
+import java.awt.Canvas;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -27,7 +28,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.JSeparator;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -40,7 +40,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  */
 
-public class ImagePanel extends JPanel {
+public class ImagePanel extends Canvas {
 
 	/**
 	 * 
@@ -124,7 +124,6 @@ public class ImagePanel extends JPanel {
 	}
 
 	private void Init() {
-		setLayout(null);
 		menu = new JPopupMenu();
 		openButton = new JMenuItem("Öffnen...");
 		openButton.addActionListener(new ActionListener() {
